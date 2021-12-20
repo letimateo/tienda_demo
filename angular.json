@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "tienda_demo:build:production",
+            "firebaseProject": "tienda-demo-533ee",
+            "firebaseHostingSite": "tienda-demo-533ee"
+          }
         }
       }
     }

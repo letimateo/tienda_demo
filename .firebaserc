@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tienda-demo-533ee": {
+      "hosting": {
+        "tienda_demo": [
+          "tienda-demo-533ee"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tienda-demo-533ee"
+  }
+}

@@ -1,0 +1,38 @@
+<div class="containers ">
+    <div class="card mt-4">
+        <div class="body mt-4">
+            <span class="h3">Listado de Ordenes</span>
+            <button class="btn btn-dark btn-lg float-md-end" routerLink='/orden'> Nueva Orden </button>
+            <table class="table mt-2 table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Pagar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let orden of ordenes">
+                    <td>{{ orden.nombre }}</td>
+                    <td>{{ orden.apellido }}</td>
+                    <td>{{ orden.email }}</td>
+                    <td>{{ orden.celular }}</td>                    
+                    <td>{{ orden.estado }}</td>           
+                    <td> 
+                      <i class="fa-solid fa-comments-dollar fa-lg" [routerLink]="['/verOrden', orden.id]"  *ngIf="orden.pendientePago"></i>
+                      
+                    </td> 
+                    <td> 
+                      <i class="fa-solid fa-trash-alt fa-lg text-danger"></i>
+                    </td> 
+                  </tr>
+                  
+                </tbody>
+              </table>                 
+        </div>
+    </div>
+</div>
+ 
